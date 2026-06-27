@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(45deg, #000, #3a4452);
+    padding: 15px;
+    overflow-y: scroll;
+}
+.calculator{
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #717377;
+    padding: 10px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgb(113, 115, 119, 0.5);
+}
+.calculator input{
+    width: 100%;
+    border: none;
+    padding: 30px 40px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-align: right;
+    color: #ffff;
+}
+#toggleButton{
+    margin:10px 30px;
+    font-size: 1.5rem;
+    color: #ffff;
+    cursor: pointer;
+}
+#extraOptions{
+display: none;
+}
+#extraOptions.show{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btns{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.btns > div{
+    display: flex;
+    gap: 10px;
+}
+input::placeholder{
+    color: #ffff;
+}
+button{
+    flex: 1;
+    aspect-ratio: 1/1;
+    background: transparent;
+    border-radius: 50%;
+    color: #ffff;
+    border: none;
+    font-size: 26px;
+    box-shadow: 1px 1px 2px 3px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.equalBtn{
+    background: #fb7c14;
+}
+.operator{
+    color: #6dee0a;
+}
+@media(max-width:468px){
+    .calculator{
+    padding: 5px;
+    width: 100%;
+    max-width: 100vw;
+    padding: 20px;
+}
+.calculator input{
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+}
+
+button{
+    margin: 5px; 
+    font-size: 22px;
+}
+}
