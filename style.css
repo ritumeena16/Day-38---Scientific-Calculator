@@ -1,3 +1,14 @@
+:root{
+--bg-start: #000;
+--bg-end: #3a4452;
+--text-color: #fff;
+--equal-btn: #fb7c14;
+--operator-color:#6dee0a;
+--border-color:#717377;
+--calculator-shadow:rgb(113,115,119,0.5);
+--input-shadow:rgb(84, 84, 84, 0.1);
+--button-shadow:rgba(255,255,255,.1);
+}
 *{
     margin: 0;
     padding: 0;
@@ -13,33 +24,33 @@ main{
     display: flex;  
     align-items: center;
     justify-content: center;
-    background:linear-gradient(45deg, #000, #3a4452);
+    background:linear-gradient(45deg, var(--bg-start), var(--bg-end));
     padding: 15px;
     overflow-y: scroll;
 }
 .calculator{
     width: 100%;
     max-width: 500px;
-    border: 1px solid #717377;
+    border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 16px;
     background: transparent;
-    box-shadow: 0px 3px 15px rgb(113, 115, 119, 0.5);
+    box-shadow: 0px 3px 15px var(--calculator-shadow)
 }
 .calculator input{
     width: 100%;
     border: none;
     padding: 30px 40px;
     background: transparent;
-    box-shadow: 0px 3px 15px rgb(84, 84, 84, 0.1);
+    box-shadow: 0px 3px 15px var(--input-shadow);
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-align: right;
-    color: #ffff;
+    color: var(--text-color);
 }
 #toggleButton{
     margin:10px 30px;
     font-size: 1.5rem;
-    color: #ffff;
+    color: var(--text-color);
     cursor: pointer;
 }
 #extraOptions{
@@ -60,24 +71,24 @@ display: none;
     gap: 10px;
 }
 input::placeholder{
-    color: #ffff;
+    color: var(--text-color);
 }
 button{
     flex: 1;
     aspect-ratio: 1/1;
     background: transparent;
     border-radius: 50%;
-    color: #ffff;
+    color: var(--text-color);
     border: none;
     font-size: 26px;
-    box-shadow: 1px 1px 2px 3px rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 2px 3px var(--button-shadow);
     cursor: pointer;
 }
 .equalBtn{
-    background: #fb7c14;
+    background: var(--equal-btn);
 }
 .operator{
-    color: #6dee0a;
+    color: var(--operator-color);
 }
 @media(max-width:468px){
     .calculator{
