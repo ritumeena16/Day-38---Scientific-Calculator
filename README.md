@@ -24,17 +24,13 @@ A responsive Scientific Calculator built using HTML, CSS, and JavaScript.
 - CSS3
 - JavaScript (Vanilla JS)
 
-## 📷 Screenshot
-
-(Add screenshot here)
-
 ## 🔗 Live Demo
 
-(Add GitHub Pages Link)
+ https://ritumeena16.github.io/Day-38---Scientific-Calculator/
 
 ## 📂 GitHub Repository
 
-https://github.com/your-username/your-repository
+https://github.com/ritumeena16/Day-38---Scientific-Calculator
 
 ## 📚 What I Learned
 
@@ -50,4 +46,4 @@ While building this project, I practiced:
 
 ## 👩‍💻 Author
 
-**Sanjna Meena**
+**Ritu Meena**
