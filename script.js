@@ -5,8 +5,13 @@ buttons.forEach(button => {
     button.addEventListener('click', (e) => { 
 
         if(e.target.innerHTML == '='){  
+         try{
          string = eval(string);  
          input.value = string;
+         }
+         catch{
+            input.value = "error";
+         }
         }
         else if(e.target.innerHTML == 'AC'){ 
             string ="";
@@ -69,6 +74,7 @@ buttons.forEach(button => {
             string += e.target.innerHTML;
             input.value = string;
         }
+
     })
 });
 let toggleButton = document.getElementById('toggleButton');
@@ -78,3 +84,23 @@ let extraOptions = document.getElementById('extraOptions');
         console.log(extraOptions.className);
        toggleButton.innerHTML = extraOptions.classList.contains("show")? "▲" : "▼";
  });
+
+    document.addEventListener("keydown",function(e){
+    let key = e.key;
+        if(key == "Enter"){
+            key = "=";
+        }
+        if(key == "Backspace"){
+            key = "DEL";
+        }
+        if(key == "Escape"){
+            key = "AC";
+        }        
+         buttons.forEach(button =>{
+            if(button.textContent == key){
+                 button.click();
+                 console.log("Pressed:", key);
+                 console.log("Matched:", button.textContent);
+            }
+        });
+    });
