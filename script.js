@@ -6,11 +6,18 @@ buttons.forEach(button => {
 
         if(e.target.innerHTML == '='){  
          try{
-         string = eval(string);  
-         input.value = string;
+         let result = eval(string);  
+         if(result == Infinity){
+            input.value = "can't divided by zero";
+            string = "";
+         }else{
+            string = result;
+            input.value = string;
+         }
          }
          catch{
-            input.value = "error";
+            input.value = "syntax error";
+            string = "";
          }
         }
         else if(e.target.innerHTML == 'AC'){ 
@@ -20,6 +27,26 @@ buttons.forEach(button => {
         else if(e.target.innerHTML == 'DEL'){  
         string = string.substring(0, string.length-1); 
         input.value = string; 
+        }
+        else if(e.target.innerHTML == '()'){
+             let open = 0;
+             let close = 0;
+            for(let i=0; i<string.length; i++){
+                let character = string[i];
+                if(character == '('){
+                    open++;
+                }
+                if(character == ')'){
+                    close++;
+                }
+            }
+            if(open > close){
+                string += ')';
+            }
+            else{
+                string += '(';
+            }
+          input.value = string;
         }
         else if(e.target.innerHTML.trim() == 'abs'){
         let num = Number(input.value);
